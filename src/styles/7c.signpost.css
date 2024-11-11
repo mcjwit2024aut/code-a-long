@@ -1,0 +1,47 @@
+section.signposts {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-rows: var(--header-height) auto;
+    min-height: var(--signpost-height);
+}
+
+section.signposts > main {
+    display: grid;
+    grid-gap: var(--large-padding);
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+section.signposts article,
+section.signposts article > a {
+    display: grid;
+    grid-template-rows: var(--header-height) auto var(--header-height);
+}
+
+section.signposts article main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.signposts article header,
+section.signposts article footer,
+section.signposts article main p {
+    padding: var(--small-padding);
+    background-color: var(--background-fade);
+}
+
+section.signposts article {
+    position: relative;
+}
+
+section.signposts article > a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+section.signposts article > a:hover {
+    background-color: var(--signpost-highlight-fade);
+}

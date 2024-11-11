@@ -1,0 +1,8 @@
+:root {
+
+    --hero-foreground-fade: rgba(255, 255, 255, 0.3);
+    --hero-accent-text: black;
+    --hero-button: gray;
+
+    --hero-height: var(--min-width);
+}

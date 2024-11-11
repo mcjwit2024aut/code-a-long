@@ -1,0 +1,4 @@
+:root {
+    --signpost-height: calc(var(--header-height) * 6);
+    --signpost-highlight-fade: rgba(255, 255, 255, 0.5);
+}

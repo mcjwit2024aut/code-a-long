@@ -1,0 +1,9 @@
+:root {
+    --min-width: 30rem;
+    --max-width: 90%;
+    --header-height: 3rem;
+    --footer-height: var(--header-height);
+
+    --large-padding: 1rem;
+    --small-padding: calc(var(--large-padding) / 2);
+}

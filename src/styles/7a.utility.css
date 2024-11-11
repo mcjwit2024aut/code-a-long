@@ -1,0 +1,6 @@
+[style^="--bgimage"] {
+    background-image: var(--bgimage);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

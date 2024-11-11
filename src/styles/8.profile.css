@@ -1,0 +1,39 @@
+section.profile {
+    background-color: var(--background-fade);
+    min-height: calc(var(--header-height) * 4);
+
+
+    margin: var(--large-padding) 0;
+    padding: var(--large-padding);
+
+    display: grid;
+    flex: 1 0 auto;
+    gap: var(--small-padding);
+    grid-template-columns: calc(var(--header-height) * 3) auto;
+}
+
+section.profile > header {
+    align-content: center;
+}
+
+section.profile h2 {
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    font-size: 3rem;
+    min-height: calc(var(--header-height) * 3);
+    min-width: calc(var(--header-height) * 4);
+}
+
+section.profile h2:first-letter {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+section.profile img.profile {
+    width: calc(var(--header-height) * 4);
+    height: calc(var(--header-height) * 4);
+    float: right;
+    margin: var(--large-padding);
+    border-radius: 50%;
+    shape-outside: circle();
+}

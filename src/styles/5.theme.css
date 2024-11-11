@@ -1,0 +1,33 @@
+body {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+a,
+a:hover,
+a:visited {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body > header > a {
+    background-color: var(--logo-button);
+    height: calc(var(--header-height) / 2);
+    padding: var(--large-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > header,
+body > footer {
+    background-color: var(--background-fade);
+}
+
+p {
+    margin: var(--small-padding);
+}

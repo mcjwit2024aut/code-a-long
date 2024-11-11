@@ -1,0 +1,48 @@
+section.hero {
+    min-height: var(--hero-height);
+    padding: var(--large-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--hero-accent-text);
+    position: relative;
+}
+
+section.hero > * {
+    background-color: var(--hero-foreground-fade);
+    padding: var(--large-padding);
+    min-width: calc(var(--min-width) - 4 * var(--large-padding));
+    /* 30rem - 2x( 1rem main padding + 1rem section padding )*/
+}
+
+section.hero footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.hero footer a {
+    text-transform: uppercase;
+    background-color: var(--hero-button);
+    padding: var(--small-padding);
+    border-radius: calc(var(--small-padding) / 2);
+}
+
+section.hero::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-image: var(--hero-background-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.hero.full::before {
+    position: fixed;
+}

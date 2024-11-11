@@ -1,0 +1,19 @@
+body > header,
+body > footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    padding: var(--large-padding);
+}
+
+body > footer {
+    justify-content: center;
+}
+
+body > header nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--large-padding);
+    align-items: center;
+}
