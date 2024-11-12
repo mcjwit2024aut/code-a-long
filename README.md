@@ -105,28 +105,6 @@ session, we should have build an example homepage similar to:
 
     [![Switch to new Profile](./assets/vscode-profiles-switch_800x566.png)](./assets/vscode-profiles-switch.png)
 
-* Configure `git` in VS Code Terminal
-
-  [![New Terminal](./assets/vscode-new-terminal.png)](./assets/vscode-new-terminal.png)
-  [![Open Terminal](./assets/vscode-new-terminal-window.png)](./assets/vscode-new-terminal-window.png)
-
-  ```bash
-  git config --global user.name "<first_name> <last_name>"
-  git config --global user.email "<your@email.com>"
-  ```
-
-  Example:
-  
-  ```bash
-  abc@92706a4a8ed9:~/workspace$ git config --global user.name "Martin Jarvis"
-  abc@92706a4a8ed9:~/workspace$ git config --global user.email "martin.jarvis@test.com"
-  abc@92706a4a8ed9:~/workspace$ git config --global -l
-  user.name=Martin Jarvis
-  user.email=martin.jarvis@test.com
-  ```
-
-  [![Example Insitu](./assets/vscode-terminal-git-config_800x364.png)](./assets/vscode-terminal-git-config.png)
-
 * Clone Git Repo using GitHub VS Code integration (doesn't work on many corporate laptops)
 
   * Select `Git: Clone` from the command palette (can be access by `View` -> `Command Palette`)
@@ -169,6 +147,29 @@ session, we should have build an example homepage similar to:
     [![Trust Repo](./assets/windows/github-vscode-trust-repo.png)](./assets/windows/github-vscode-trust-repo.png)
 
 * Setup `git` to use your GitHub account vis SSH - ** this is tricky (but only needs to be done once!)** [Official Guide - Create SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), [Official Guide - Add SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+  * Configure `git` in VS Code Terminal
+
+    [![New Terminal](./assets/vscode-new-terminal.png)](./assets/vscode-new-terminal.png)
+    [![Open Terminal](./assets/vscode-new-terminal-window.png)](./assets/vscode-new-terminal-window.png)
+
+    ```bash
+    git config --global user.name "<first_name> <last_name>"
+    git config --global user.email "<your@email.com>"
+    ```
+
+    Example:
+    
+    ```bash
+    abc@92706a4a8ed9:~/workspace$ git config --global user.name "Martin Jarvis"
+    abc@92706a4a8ed9:~/workspace$ git config --global user.email "martin.jarvis@test.com"
+    abc@92706a4a8ed9:~/workspace$ git config --global -l
+    user.name=Martin Jarvis
+    user.email=martin.jarvis@test.com
+    ```
+
+    [![Example Insitu](./assets/vscode-terminal-git-config_800x364.png)](./assets/vscode-terminal-git-config.png)
+
   * Generate a new SSH Key using `ssh-keygen` in terminal (this needs to use the email address used for your [GitHub account](https://github.com/settings/emails)):
 
     `ssh-keygen -t ed25519 -C "martin.c.jarvis+wit2024aut@googlemail.com"`
@@ -329,7 +330,7 @@ session, we should have build an example homepage similar to:
 
 ## Setup Template with Wireframe CSS
 * Setup `./src` folder
-    * Basic `index.html` ([Final](./src/1.%20boilerplate.html))
+    * Update `index.html` ([Final](./src/1.%20boilerplate.html))
       ```html
       <!DOCTYPE html>
       <html lang="en">
@@ -344,8 +345,8 @@ session, we should have build an example homepage similar to:
       </body>
       </html>
       ```
-* Create page scaffolding:
-  ![Scaffolding](assets/wireframe.png)
+
+* Create page template scaffolding:
 * Update `index.html` `<body>` content to be:
   ```html
     <header></header>
@@ -377,7 +378,7 @@ session, we should have build an example homepage similar to:
   >
   Note: [border](https://developer.mozilla.org/en-US/docs/Web/CSS/border), [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), [margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin), [min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height), [min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width)
 * Link the stylesheet `<link rel="stylesheet" href="styles/styles.css" />`
-* [Final](./src/2.%20wireframe.html):![Wireframe Final](./assets/wireframe-final.png)
+* [Final](./src/2.%20wireframe.html)
 
 ## Responsive Layout CSS
 
@@ -450,7 +451,7 @@ session, we should have build an example homepage similar to:
         grid-row: 3;
       }
       ```
-    * [Final](./src/3.%20layout.html):![Wireframe Final](./assets/wireframe-layout.png)
+    * [Final](./src/3.%20layout.html)
 
 ## Setup Header and Footer
 
@@ -498,7 +499,7 @@ session, we should have build an example homepage similar to:
     justify-content: center;
   }
   ```
-* [Final](./src/4.%20header+footer.html):![Wireframe Final](./assets/wireframe-header+footer.png)
+* [Final](./src/4.%20header+footer.html)
 
 ## Basic Theme
 
@@ -554,7 +555,7 @@ session, we should have build an example homepage similar to:
     background-color: var(--background-fade);
   }
   ```
-* [Final](./src/5.%20theme.html):![Wireframe Final](./assets/wireframe-theme.png)
+* [Final](./src/5.%20theme.html)
 
 ## Hero Module
 
@@ -652,7 +653,7 @@ session, we should have build an example homepage similar to:
   > Note: This rull will apply if the `full` class is applied to the `hero` section, and will make to positioning of the
   background image relative to the viewport of the browser.
 * Comment out the wireframe CSS
-* [Final](./src/6.%20hero.html):![Wireframe Final](./assets/hero-module.png)
+* [Final](./src/6.%20hero.html)
 
 ## Signpost Module
 
@@ -697,7 +698,8 @@ session, we should have build an example homepage similar to:
   }
   ```
 * Select Three signpost images and save the urls:
-  ![Unsplash url](assets/copy-unspash-address.png)
+  
+  ![Unsplash url](./assets/copy-unsplash-address.png)
 * Add markup for simple signpost:
 
 ```html
@@ -833,9 +835,12 @@ section.signposts article main p {
     grid-row: 3;
   }
   ```
-* [Final](./src/7.%20signpost.html):![Wireframe Final](./assets/homepage.png)
+* [Final](./src/7.%20signpost.html)
 
 ## Seperate Theme from Layout
+
+* Include a custom font from [Google Fonts](https://fonts.google.com/) 
+  > you can copy the `@import` CSS directive into your CSS file - it doesn't need to be in the HTML.  This means the font can be part of a theme!
 
 * Move all the colour variables to a new CSS `theme.css` File:
   ```css
@@ -865,3 +870,4 @@ Useful Urls:
 * [Unsplash](https://unsplash.com)
 * [Style Stage](https://stylestage.dev/)
 * [Code Pen Modules](https://codepen.io/collection/vBQEZQ)
+* [Google Fonts](https://fonts.google.com/)
