@@ -131,8 +131,7 @@ session, we should have build an example homepage similar to:
 
   * > If behind a firewall VS Code may fail with an error similar to:
     >  
-    > [![Network Error](./assets/vscode-clone-from-github-network-error_800x74.png)](./assets/vscode-clone-from-github-network-error
-.png)  
+    > ![Network Error](./assets/vscode-clone-from-github-network-error_800x74.png)
     > 
     > In this case we need to use the fallback SSH method (see next section)
 
