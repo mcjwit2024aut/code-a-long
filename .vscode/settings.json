@@ -1,4 +1,7 @@
 {
     "livePreview.serverRoot": "/src",
-    "liveServer.settings.root": "/src"
+    "liveServer.settings.root": "/src",
+    "liveServer.settings.port": 5501,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true
 }

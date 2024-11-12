@@ -151,18 +151,22 @@ session, we should have build an example homepage similar to:
 
     Return to VS Code
 
-  * If behind a firewall VS Code may fail with an error similar to:
-
-    [![Network Error](./assets/vscode-clone-from-github-network-error_800x74.png)](./assets/vscode-clone-from-github-network-error
+  * > If behind a firewall VS Code may fail with an error similar to:
+    >  
+    > [![Network Error](./assets/vscode-clone-from-github-network-error_800x74.png)](./assets/vscode-clone-from-github-network-error
 .png)  
+    > 
+    > In this case we need to use the fallback SSH method (see next section)
 
+  * However, if the process works:
 
+    [![Select Repo](./assets/windows/github-vscode-select-repo_800x156.png)](./assets/windows/github-vscode-select-repo.png)
 
+    [![Pick folder](./assets/windows/github-vscode-pick-folder_800x463.png)](./assets/windows/github-vscode-pick-folder.png)
 
+    [![Open Repo](./assets/windows/github-vscode-open-repo.png)](./assets/windows/github-vscode-open-repo.png)
 
-
-
-
+    [![Trust Repo](./assets/windows/github-vscode-trust-repo.png)](./assets/windows/github-vscode-trust-repo.png)
 
 * Setup `git` to use your GitHub account vis SSH - ** this is tricky (but only needs to be done once!)** [Official Guide - Create SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent), [Official Guide - Add SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
   * Generate a new SSH Key using `ssh-keygen` in terminal (this needs to use the email address used for your [GitHub account](https://github.com/settings/emails)):
@@ -249,26 +253,79 @@ session, we should have build an example homepage similar to:
 
         [![Successfully added key](./assets/github-ssh-added-key_800x327.png)](./assets/github-ssh-added-key.png)
 
+  * Copy **SSH** Clone Url from GitHub  
+
+    [![Copy SSH Clone Url](./assets/github-clone-ssh.png)](./assets/github-clone-ssh.png)
+
+  * Clone from Url
+
+    [![Clone from Url](./assets/vscode-clone-from-github-ssh_800x148.png)](./assets/vsclode-clone-from-github-success.png)
+
+    [![Paste Url](./assets/vscode-clone-from-github-ssh-paste.png)](./assets/vscode-clone-from-github-ssh-paste.png)
+
+    Pick Target Directory
+
+    [![Accept the Fingerprint](./assets/vscode-clone-from-github-accept-fingerprint.png)](./assets/vscode-clone-from-github-accept-fingerprint.png)
+
+    [![Open Repo](./assets/vscode-clone-from-github-open-repo.png)](./assets/vscode-clone-from-github-open-repo.png)
+
+* Make a local changes and push to GitHub
+
+  * Move `index.html` into a `src` folder
+  * Update `.github/workflows/static.yml` to publish website from `./src`
+
+    [![Edit pipeline](./assets/github-edit-pipeline.png)](./assets/github-edit-pipeline.png)
+
+  * Check changes **Source Control** panel
+
+    [![Commit Pipeline Changes](./assets/vscode-commit-changes.png)](./assets/vscode-commit-changes.png)
+
+    [![Stage all changes](./assets/vscode-stage-all-changes.png)](./assets/vscode-stage-all-changes.png)
+
+    [![Sync Changes](./assets/vscode-sync-changes.png)](./assets/vscode-sync-changes.png)
+
+    [![Confirm Changes](./assets/vscode-commit-push-confirm.png)](./assets/vscode-commit-push-confirm.png)
+
+  * Confirm GitHub Pipeline triggers and change is published!
+
+    [![Pushed Commit Pipeline](./assets/vscode-commit-pipeline-run.png)](./assets/vscode-commit-pipeline-run.png)
+  
+
 * Setup VSCode Workspace
     * Install Extension
-        * [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
-        * Open the `Settings`
-          ![Edit Settings](assets/new-vscode-workspace-settings.png)
-        * Toggle to `Workspace` Settings and filter to `livePreview.serverRoot`
-          ![ServerRoot](assets/vscode-livepreview.png)
-          Set to `/src`
-        * This should create a new file `.vscode/settings.json` with the contents:
-          ```json
-          {
-              "livePreview.serverRoot": "/src"
-          }
-          ```
-          ![Live Preview](assets/vscode-livepreview.png)
-        * The Live Preview extension and published website should now work in the same way
+      * [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+
+        [![Live Preview](./assets/live-preview-find.png)](./assets/live-preview-find.png)
+      * Open the `Workspace Settings`
+        [![Open Settings](a./assets/live-preview-open-workspace-settings_800x533.png)](./assets//live-preview-open-workspace-settings.png)
+      * Toggle to `Workspace` Settings and filter to `livePreview.serverRoot`
+        [![ServerRoot](./assets/live-preview-update-settings_800x468.png)](./assets/live-preview-update-settings.png)
+        Set to `/src`
+      * This should create a new file `.vscode/settings.json` with the contents:
+        ```json
+        {
+            "livePreview.serverRoot": "/src"
+        }
+        ```
+        ![Live Preview](assets/live-preview-show-preview.png)
+      * The Live Preview extension and published website should now work in the same way
 
       > The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension can be
       configured in a similar way using: `liveServer.settings.root`
-      > ![Live Server](assets/vscode-liveserver.png)
+      > 
+      > ![Live Server](./assets/live-server-find.png)
+      >
+      > ![Live Server Settings](./assets/live-server-settings-root.png)
+      >
+      > ![Live Server + Preview Settings](./assets/live-server-settings.png)
+
+  * __Optionally__ install:
+      * `Image` (n3rds-inc.image) - for Right click -> Resize images
+      * `Luna Paint - Image Editor` (Tyriar.luna-paint) - basic image editor within VS Code
+
+  * Enable `Auto Save` (and `Format on Save`)
+
+    [![Auto Save](./assets/setting-autosave.png)](./assets/setting-autosave.png)
 
 ## Setup Template with Wireframe CSS
 * Setup `./src` folder
